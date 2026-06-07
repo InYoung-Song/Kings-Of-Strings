@@ -2,6 +2,8 @@
 
 Modern website for The Kings of Strings, a rock and roll band from Detroit, Michigan. Rebuilt from the original Wix site on Next.js with all original content, images, music links, and branding preserved.
 
+Live site: [https://kings-of-strings-oo2ad0a1g-inyoungsong2-4850s-projects.vercel.app/](https://kings-of-strings-oo2ad0a1g-inyoungsong2-4850s-projects.vercel.app/)
+
 ## Tech stack
 
 - **Next.js** (App Router) + **TypeScript**
