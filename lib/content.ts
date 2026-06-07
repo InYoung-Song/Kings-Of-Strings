@@ -119,6 +119,11 @@ export const tour = {
   emptyState: "No upcoming shows listed right now. Check back soon.",
 } as const;
 
+export const merch = {
+  heading: "Merch",
+  emptyState: "Merch is on the way. Check back soon.",
+} as const;
+
 export const forms = {
   successMessage: "Thanks for submitting!",
 } as const;

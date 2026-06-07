@@ -16,6 +16,7 @@ const tableQueries = [
   ["contact_messages", () => sql`select count(*)::int as count from contact_messages`],
   ["subscribers", () => sql`select count(*)::int as count from subscribers`],
   ["tour_dates", () => sql`select count(*)::int as count from tour_dates`],
+  ["merch", () => sql`select count(*)::int as count from merch`],
   ["music_releases", () => sql`select count(*)::int as count from music_releases`],
   ["media_assets", () => sql`select count(*)::int as count from media_assets`],
   ["site_content", () => sql`select count(*)::int as count from site_content`],

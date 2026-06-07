@@ -47,9 +47,9 @@ export function Header() {
       <div className="container-page flex h-16 items-center justify-between gap-4 sm:h-20">
         <Link
           href="/"
-          className="font-display text-lg font-bold uppercase leading-none tracking-tight sm:text-xl"
+          className="font-logo text-lg leading-none text-fg sm:text-xl"
         >
-          <span className="text-brand">The Kings</span> of Strings
+          The Kings of Strings
           <span className="sr-only"> {siteConfig.shortDescription}</span>
         </Link>
 

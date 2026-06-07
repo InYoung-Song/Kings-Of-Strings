@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter, Oswald, Rye } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { LetsChat } from "@/components/layout/LetsChat";
 import { siteConfig } from "@/lib/site";
 
 const inter = Inter({
@@ -15,6 +16,14 @@ const inter = Inter({
 const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
+});
+
+// Decorative western/tuscan face that echoes the official KOS logo wordmark.
+const rye = Rye({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-logo",
   display: "swap",
 });
 
@@ -74,7 +83,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${oswald.variable}`}
+      className={`${inter.variable} ${oswald.variable} ${rye.variable}`}
     >
       <body className="flex min-h-screen flex-col">
         <ThemeProvider
@@ -94,6 +103,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <LetsChat />
         </ThemeProvider>
       </body>
     </html>

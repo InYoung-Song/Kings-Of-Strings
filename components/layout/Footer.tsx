@@ -10,9 +10,7 @@ export function Footer() {
       <div className="container-page py-12">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <p className="font-display text-xl font-bold uppercase tracking-tight">
-              <span className="text-brand">The Kings</span> of Strings
-            </p>
+            <p className="font-logo text-xl text-fg">The Kings of Strings</p>
             <p className="mt-3 text-sm text-muted">
               {siteConfig.shortDescription}
             </p>

@@ -2,7 +2,7 @@
 
 Modern website for The Kings of Strings, a rock and roll band from Detroit, Michigan. Rebuilt from the original Wix site on Next.js with all original content, images, music links, and branding preserved.
 
-Live site: [https://kings-of-strings-oo2ad0a1g-inyoungsong2-4850s-projects.vercel.app/](https://kings-of-strings-oo2ad0a1g-inyoungsong2-4850s-projects.vercel.app/)
+Live site: [https://kings-of-strings.vercel.app/](https://kings-of-strings.vercel.app/)
 
 ## Tech stack
 
@@ -26,15 +26,20 @@ The site renders fully without a database configured (the Tour page shows its em
 
 | Variable | Exposure | Purpose |
 | --- | --- | --- |
-| `DATABASE_URL` | server only | Neon Postgres connection string. Used by the API routes and the Tour page. Never exposed to the browser. |
+| `DATABASE_URL` | server only | Neon Postgres connection string. Used by the API routes, Tour, Merch, and admin. Never exposed to the browser. |
+| `ADMIN_PASSWORD` | server only | Password for the `/admin` dashboard login. |
+| `AUTH_SECRET` | server only | Signs the admin session cookie. Use a long random string. |
 
-Find this in the Neon console under **Connection Details** (use the pooled connection string, ending in `?sslmode=require`). In Vercel, add it under **Project Settings -> Environment Variables**.
+Find `DATABASE_URL` in the Neon console under **Connection Details** (use the pooled connection string, ending in `?sslmode=require`). Generate `AUTH_SECRET` with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. In Vercel, add all three under **Project Settings -> Environment Variables**.
 
 ## Database setup
 
 1. Create a free project at [neon.tech](https://neon.tech) and open its **SQL Editor**.
 2. Run [`db/migrations/0001_init.sql`](db/migrations/0001_init.sql) to create the tables.
-3. (Optional) Run [`db/seed.sql`](db/seed.sql) to pre-populate the two real music releases. No tour dates are seeded.
+3. Run [`db/migrations/0002_merch.sql`](db/migrations/0002_merch.sql) to add the merch table.
+4. (Optional) Run [`db/seed.sql`](db/seed.sql) to pre-populate the two real music releases. No tour dates are seeded.
+
+Then visit `/admin` and log in with `ADMIN_PASSWORD` to manage tour dates, merch, messages, and subscribers. See [docs/admin-setup.md](docs/admin-setup.md).
 
 Access model:
 

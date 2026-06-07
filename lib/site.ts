@@ -20,6 +20,7 @@ export const navLinks: NavLink[] = [
   { href: "/about", label: "About" },
   { href: "/gallery", label: "Gallery" },
   { href: "/tour", label: "Tour" },
+  { href: "/merch", label: "Merch" },
   { href: "/contact", label: "Contact" },
 ];
 

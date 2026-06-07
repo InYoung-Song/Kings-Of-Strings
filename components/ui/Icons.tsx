@@ -146,3 +146,15 @@ export function ArrowRightIcon(props: IconProps) {
     </Svg>
   );
 }
+
+export function ChatIcon(props: IconProps) {
+  return (
+    <Svg fill="none" stroke="currentColor" strokeWidth="2" {...props}>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"
+      />
+    </Svg>
+  );
+}
